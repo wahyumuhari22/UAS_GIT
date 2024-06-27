@@ -1,9 +1,9 @@
-<?= $this ->extend('layout/v_main')?>
-<?= $this ->extend('layout/v_menu')?>
-<?= $this ->Section('isi')?>
+<?= $this->extend('layout/v_main') ?>
+<?= $this->extend('layout/v_menu') ?>
+<?= $this->Section('isi') ?>
 <div class="col-sm-12">
     <div class="page-title-box">
-        <h4 class="page-title">Selamat Datang</h4>
+        <h4 class="page-title">Selamat Datang di halaman database</h4>
     </div>
 </div>
 <div class="col-sm-12">
@@ -17,4 +17,4 @@
         </div>
     </div>
 </div>
-<?= $this ->endSection()?>
+<?= $this->endSection() ?>
