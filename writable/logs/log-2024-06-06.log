@@ -1,0 +1,188 @@
+ERROR - 2024-06-06 15:37:58 --> mysqli_sql_exception: Unknown column 'mahasiswa060' in 'where clause' in D:\ci4ajax_prasetiyabimananda\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\ci4ajax_prasetiyabimananda\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\ci4ajax_prasetiyabimananda\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\ci4ajax_prasetiyabimananda\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\ci4ajax_prasetiyabimananda\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\ci4ajax_prasetiyabimananda\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\ci4ajax_prasetiyabimananda\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', Array, NULL, 'nim')
+#6 D:\ci4ajax_prasetiyabimananda\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', Array, Array, 'nim')
+#7 D:\ci4ajax_prasetiyabimananda\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 D:\ci4ajax_prasetiyabimananda\app\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate(Array)
+#9 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+#10 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#11 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\ci4ajax_prasetiyabimananda\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 D:\ci4ajax_prasetiyabimananda\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\ci4ajax_prasetiyabimananda\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\ci4ajax_prasetiyabimananda\system\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_pras...')
+#16 {main}
+CRITICAL - 2024-06-06 15:37:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mahasiswa060' in 'where clause'
+[Method: POST, Route: Mahasiswa/simpandata]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 4 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
+CRITICAL - 2024-06-06 15:37:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mahasiswa060' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
+CRITICAL - 2024-06-06 15:37:58 --> [Caused by] mysqli_sql_exception: Unknown column 'mahasiswa060' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
+ERROR - 2024-06-06 15:38:12 --> mysqli_sql_exception: Unknown column 'mahasiswa060' in 'where clause' in D:\ci4ajax_prasetiyabimananda\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\ci4ajax_prasetiyabimananda\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\ci4ajax_prasetiyabimananda\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\ci4ajax_prasetiyabimananda\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\ci4ajax_prasetiyabimananda\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\ci4ajax_prasetiyabimananda\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\ci4ajax_prasetiyabimananda\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', Array, NULL, 'nim')
+#6 D:\ci4ajax_prasetiyabimananda\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', Array, Array, 'nim')
+#7 D:\ci4ajax_prasetiyabimananda\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 D:\ci4ajax_prasetiyabimananda\app\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate(Array)
+#9 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+#10 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#11 D:\ci4ajax_prasetiyabimananda\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\ci4ajax_prasetiyabimananda\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 D:\ci4ajax_prasetiyabimananda\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\ci4ajax_prasetiyabimananda\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\ci4ajax_prasetiyabimananda\system\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_pras...')
+#16 {main}
+CRITICAL - 2024-06-06 15:38:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mahasiswa060' in 'where clause'
+[Method: POST, Route: Mahasiswa/simpandata]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 4 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
+CRITICAL - 2024-06-06 15:38:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mahasiswa060' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 6 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
+CRITICAL - 2024-06-06 15:38:12 --> [Caused by] mysqli_sql_exception: Unknown column 'mahasiswa060' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = \'22110056\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa060`
+WHERE `mahasiswa060` = :mahasiswa060:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('22110056', 'mahasiswa060', [...], null, 'nim')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '22110056', [...], [...], 'nim')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Mahasiswa.php(46): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\ci4ajax_prasetiyabimananda\\public\\index.php')
