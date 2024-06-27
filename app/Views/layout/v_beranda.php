@@ -12,7 +12,7 @@
         <div class="card-body">
             <p class="card-text"></p>
             <div class="alert alert-info">
-                Ini Latihan data barang
+                Ini Latihan data barang baru
             </div>
         </div>
     </div>
