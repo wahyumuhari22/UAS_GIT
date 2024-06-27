@@ -3,7 +3,7 @@
 <?= $this->Section('isi') ?>
 <div class="col-sm-12">
     <div class="page-title-box">
-        <h4 class="page-title">Selamat Datang di halaman database</h4>
+        <h4 class="page-title">ini adalah barang</h4>
     </div>
 </div>
 <div class="col-sm-12">
