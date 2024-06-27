@@ -12,7 +12,7 @@
         <div class="card-body">
             <p class="card-text"></p>
             <div class="alert alert-info">
-                Ini Latihan Membuat CRUD di DI4 Full AJAX JQUery
+                Ini Latihan data barang
             </div>
         </div>
     </div>
