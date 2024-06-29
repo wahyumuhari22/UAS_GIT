@@ -141,3 +141,506 @@ in SYSTEMPATH\Router\Router.php on line 736.
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_wm\\public\\index.php')
+ERROR - 2024-06-27 09:25:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'dbci4ajax046', 3306, '', 0)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#13 {main}
+CRITICAL - 2024-06-27 09:25:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: Mahasiswa/ambildata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa046`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+ERROR - 2024-06-27 10:57:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'dbci4ajax046', 3306, '', 0)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#13 {main}
+CRITICAL - 2024-06-27 10:57:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: Mahasiswa/ambildata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa046`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+ERROR - 2024-06-27 10:58:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'dbci4ajax046', 3306, '', 0)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\VS CODE\ci4ajax_uas\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\VS CODE\ci4ajax_uas\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('33', 'nim046', Array, NULL, 'nim')
+#6 D:\VS CODE\ci4ajax_uas\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '33', Array, Array, 'nim')
+#7 D:\VS CODE\ci4ajax_uas\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(48): CodeIgniter\Controller->validate(Array)
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+#10 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#11 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#13 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 D:\VS CODE\ci4ajax_uas\system\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\VS CODE\ci4ajax_uas\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('33', 'nim046', Array, NULL, 'nim')
+#5 D:\VS CODE\ci4ajax_uas\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '33', Array, Array, 'nim')
+#6 D:\VS CODE\ci4ajax_uas\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(48): CodeIgniter\Controller->validate(Array)
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#15 {main}
+CRITICAL - 2024-06-27 10:58:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: Mahasiswa/simpandata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `mahasiswa046`
+WHERE `nim046` = :nim046:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('33', 'nim046', [...], null, 'nim')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('nim', 'NIM', '33', [...], [...], 'nim')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Mahasiswa.php(48): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->simpandata()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+ERROR - 2024-06-27 11:00:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'dbci4ajax046', 3306, '', 0)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#13 {main}
+CRITICAL - 2024-06-27 11:00:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: Mahasiswa/ambildata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa046`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+ERROR - 2024-06-27 11:00:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'dbci4ajax046', 3306, '', 0)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\VS CODE\ci4ajax_uas\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\VS CODE\ci4ajax_uas\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\VS CODE\ci4ajax_uas\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\VS CODE\ci4ajax_uas\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\VS CODE\ci4ajax_uas\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\VS CODE\ci4ajax_uas\app\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+#7 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#8 D:\VS CODE\ci4ajax_uas\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\VS CODE\ci4ajax_uas\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\VS CODE\ci4ajax_uas\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\VS CODE\ci4ajax_uas\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\VS CODE\ci4ajax_uas\system\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4a...')
+#13 {main}
+CRITICAL - 2024-06-27 11:00:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: Mahasiswa/ambildata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa046`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Mahasiswa.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->ambildata()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:36:28 --> ErrorException: Undefined variable $id_hewan
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_hewan', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:36:48 --> ErrorException: Undefined variable $id_hewan
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_hewan', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:39:59 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:40:03 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:40:50 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:52:29 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:56:16 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(35): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:56:21 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(35): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:56:21 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(35): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 17:59:34 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:01:38 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:09:33 --> ErrorException: Undefined variable $id
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 15.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:12:19 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 22.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:24:00 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 22.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:24:00 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 22.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(34): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')
+CRITICAL - 2024-06-27 18:24:31 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: HewanAir/formtambah]
+in APPPATH\Views\HewanAir\tambahhewan.php on line 22.
+ 1 APPPATH\Views\HewanAir\tambahhewan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\VS CODE\\ci4ajax_uas\\app\\Views\\HewanAir\\tambahhewan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('HewanAir/tambahhewan', [], true)
+ 5 APPPATH\Controllers\HewanAir.php(35): view('HewanAir/tambahhewan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->formtambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\VS CODE\\ci4ajax_uas\\public\\index.php')

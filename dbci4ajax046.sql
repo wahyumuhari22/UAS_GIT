@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Jun 2024 pada 08.11
+-- Waktu pembuatan: 29 Jun 2024 pada 11.57
 -- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.2.0
+-- Versi PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,77 @@ SET time_zone = "+00:00";
 --
 -- Database: `dbci4ajax046`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hewan_air`
+--
+
+CREATE TABLE `hewan_air` (
+  `id_hewan` int(11) NOT NULL,
+  `id` varchar(99) NOT NULL,
+  `nama` varchar(99) NOT NULL,
+  `habitat` varchar(99) NOT NULL,
+  `pola_makan` varchar(99) NOT NULL,
+  `status` varchar(99) NOT NULL,
+  `tgl_entry` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `hewan_air`
+--
+
+INSERT INTO `hewan_air` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `status`, `tgl_entry`) VALUES
+(1, '33', 'Anaconda', 'Amazon', 'Karnivora', 'Terancam', '2024-06-29 16:54:08'),
+(2, '344', 'Buaya', 'Air tawar/asin', 'Karnivora', 'Terancam', '2024-06-29 16:54:27');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hewan_darat`
+--
+
+CREATE TABLE `hewan_darat` (
+  `id_hewan` int(11) NOT NULL,
+  `id` varchar(99) NOT NULL,
+  `nama` varchar(99) NOT NULL,
+  `habitat` varchar(99) NOT NULL,
+  `pola_makan` varchar(99) NOT NULL,
+  `status` varchar(99) NOT NULL,
+  `tgl_entry` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `hewan_darat`
+--
+
+INSERT INTO `hewan_darat` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `status`, `tgl_entry`) VALUES
+(1, '44', 'Serigala', 'Rusia', 'Karnivora', 'Aman', '2024-06-29 16:56:05'),
+(2, '646', 'Singa', 'Hutan', 'Karnivora', 'Terancam', '2024-06-29 16:56:19');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hewan_udara`
+--
+
+CREATE TABLE `hewan_udara` (
+  `id_hewan` int(11) NOT NULL,
+  `id` varchar(99) NOT NULL,
+  `nama` varchar(99) NOT NULL,
+  `habitat` varchar(99) NOT NULL,
+  `pola_makan` varchar(99) NOT NULL,
+  `status` varchar(99) NOT NULL,
+  `tgl_entry` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `hewan_udara`
+--
+
+INSERT INTO `hewan_udara` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `status`, `tgl_entry`) VALUES
+(3, '23435', 'Elang', 'Pegunungan', 'Karnivora', 'Aman', '2024-06-29 16:57:18');
 
 -- --------------------------------------------------------
 
@@ -50,6 +121,24 @@ INSERT INTO `mahasiswa046` (`id_mahasiswa046`, `nim046`, `nama046`, `tmplahir046
 --
 
 --
+-- Indeks untuk tabel `hewan_air`
+--
+ALTER TABLE `hewan_air`
+  ADD PRIMARY KEY (`id_hewan`);
+
+--
+-- Indeks untuk tabel `hewan_darat`
+--
+ALTER TABLE `hewan_darat`
+  ADD PRIMARY KEY (`id_hewan`);
+
+--
+-- Indeks untuk tabel `hewan_udara`
+--
+ALTER TABLE `hewan_udara`
+  ADD PRIMARY KEY (`id_hewan`);
+
+--
 -- Indeks untuk tabel `mahasiswa046`
 --
 ALTER TABLE `mahasiswa046`
@@ -58,6 +147,24 @@ ALTER TABLE `mahasiswa046`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `hewan_air`
+--
+ALTER TABLE `hewan_air`
+  MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `hewan_darat`
+--
+ALTER TABLE `hewan_darat`
+  MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `hewan_udara`
+--
+ALTER TABLE `hewan_udara`
+  MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `mahasiswa046`

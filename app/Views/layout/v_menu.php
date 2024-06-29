@@ -1,9 +1,16 @@
 <?= $this->extend('Layout/v_main') ?>
 <?= $this->Section('menu') ?>
 <li class="has-submenu">
-    <a href="/Layout"><i class="mdi mdi-airplay"></i>Halaman</a>
+    <a href="<?= site_url('beranda') ?>"><i class="mdi mdi-airplay"></i>Beranda</a>
 </li>
 <li class="has-submenu">
-    <a href="<?= site_url('Mahasiswa') ?>">Barang</a>
+    <a href="/hewanair"><i class="mdi mdi-airplay"></i>Hewan Air</a>
 </li>
+<li class="has-submenu">
+    <a href="/hewandarat"><i class="mdi mdi-airplay"></i>Hewan Darat</a>
+</li>
+<li class="has-submenu">
+    <a href="/hewanudara"><i class="mdi mdi-airplay"></i>Hewan Udara</a>
+</li>
+
 <?= $this->endSection() ?>
