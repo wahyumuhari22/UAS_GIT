@@ -9,5 +9,8 @@
 <li class="has-submenu">
     <a href="/hewandarat"><i class="mdi mdi-airplay"></i>Hewan Darat</a>
 </li>
+<li class="has-submenu">
+    <a href="/hewanudara"><i class="mdi mdi-airplay"></i>Hewan Udara</a>
+</li>
 
 <?= $this->endSection() ?>
