@@ -12,4 +12,8 @@
 <li class="has-submenu">
     <a href="/hewanamfibi"><i class="mdi mdi-airplay"></i>Hewan Amfibi</a>
 </li>
+    <a href="/hewanudara"><i class="mdi mdi-airplay"></i>Hewan Udara</a>
+</li>
+
+
 <?= $this->endSection() ?>
