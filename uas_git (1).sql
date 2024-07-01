@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jul 2024 pada 10.07
+-- Waktu pembuatan: 01 Jul 2024 pada 11.03
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -47,6 +47,22 @@ INSERT INTO `hewan_air` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `sta
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `hewan_amfibi`
+--
+
+CREATE TABLE `hewan_amfibi` (
+  `id_hewan` int(11) NOT NULL,
+  `id` varchar(111) NOT NULL,
+  `nama` varchar(111) NOT NULL,
+  `habitat` varchar(111) NOT NULL,
+  `pola_makan` varchar(111) NOT NULL,
+  `status` varchar(111) NOT NULL,
+  `tgl_entry` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `hewan_darat`
 --
 
@@ -78,6 +94,12 @@ ALTER TABLE `hewan_air`
   ADD PRIMARY KEY (`id_hewan`);
 
 --
+-- Indeks untuk tabel `hewan_amfibi`
+--
+ALTER TABLE `hewan_amfibi`
+  ADD PRIMARY KEY (`id_hewan`);
+
+--
 -- Indeks untuk tabel `hewan_darat`
 --
 ALTER TABLE `hewan_darat`
@@ -92,6 +114,12 @@ ALTER TABLE `hewan_darat`
 --
 ALTER TABLE `hewan_air`
   MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `hewan_amfibi`
+--
+ALTER TABLE `hewan_amfibi`
+  MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `hewan_darat`
