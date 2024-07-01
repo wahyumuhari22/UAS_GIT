@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jul 2024 pada 09.17
+-- Waktu pembuatan: 01 Jul 2024 pada 10.07
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -44,6 +44,29 @@ CREATE TABLE `hewan_air` (
 INSERT INTO `hewan_air` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `status`, `tgl_entry`) VALUES
 (1, '121', 'Hiu', 'Laut', 'Karnivora', 'Terancam', '2024-07-01 14:15:08');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hewan_darat`
+--
+
+CREATE TABLE `hewan_darat` (
+  `id_hewan` int(30) NOT NULL,
+  `id` varchar(90) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `habitat` varchar(45) NOT NULL,
+  `pola_makan` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
+  `tgl_entry` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `hewan_darat`
+--
+
+INSERT INTO `hewan_darat` (`id_hewan`, `id`, `nama`, `habitat`, `pola_makan`, `status`, `tgl_entry`) VALUES
+(2, '1', 'samuel & jordan', 'darat', 'Omnivora', 'Terancam', '2024-07-01 15:06:48');
+
 --
 -- Indexes for dumped tables
 --
@@ -55,6 +78,12 @@ ALTER TABLE `hewan_air`
   ADD PRIMARY KEY (`id_hewan`);
 
 --
+-- Indeks untuk tabel `hewan_darat`
+--
+ALTER TABLE `hewan_darat`
+  ADD PRIMARY KEY (`id_hewan`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -63,6 +92,12 @@ ALTER TABLE `hewan_air`
 --
 ALTER TABLE `hewan_air`
   MODIFY `id_hewan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `hewan_darat`
+--
+ALTER TABLE `hewan_darat`
+  MODIFY `id_hewan` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

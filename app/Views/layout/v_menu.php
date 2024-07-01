@@ -6,5 +6,8 @@
 <li class="has-submenu">
     <a href="/hewanair"><i class="mdi mdi-airplay"></i>Hewan Air</a>
 </li>
+<li class="has-submenu">
+    <a href="/hewandarat"><i class="mdi mdi-airplay"></i>Hewan Darat</a>
+</li>
 
 <?= $this->endSection() ?>
