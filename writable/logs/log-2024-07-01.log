@@ -1,0 +1,51 @@
+ERROR - 2024-07-01 07:53:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\alby_uas\uas_git\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\alby_uas\uas_git\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'uas_git', 3306, '', 0)
+#1 D:\alby_uas\uas_git\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\alby_uas\uas_git\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\alby_uas\uas_git\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\alby_uas\uas_git\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\alby_uas\uas_git\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\alby_uas\uas_git\app\Controllers\HewanAir.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\alby_uas\uas_git\system\CodeIgniter.php(933): App\Controllers\HewanAir->ambildata()
+#8 D:\alby_uas\uas_git\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+#9 D:\alby_uas\uas_git\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\alby_uas\uas_git\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\alby_uas\uas_git\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\alby_uas\uas_git\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\alby_uas\uas_git\system\Commands\Server\rewrite.php(49): require_once('D:\\alby_uas\\uas...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\alby_uas\uas_git\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\alby_uas\uas_git\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\alby_uas\uas_git\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\alby_uas\uas_git\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\alby_uas\uas_git\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\alby_uas\uas_git\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\alby_uas\uas_git\app\Controllers\HewanAir.php(19): CodeIgniter\BaseModel->findAll()
+#6 D:\alby_uas\uas_git\system\CodeIgniter.php(933): App\Controllers\HewanAir->ambildata()
+#7 D:\alby_uas\uas_git\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+#8 D:\alby_uas\uas_git\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\alby_uas\uas_git\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\alby_uas\uas_git\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\alby_uas\uas_git\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\alby_uas\uas_git\system\Commands\Server\rewrite.php(49): require_once('D:\\alby_uas\\uas...')
+#13 {main}
+CRITICAL - 2024-07-01 07:53:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: HewanAir/ambildata]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `hewan_air`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\HewanAir.php(19): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HewanAir->ambildata()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HewanAir))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\alby_uas\\uas_git\\public\\index.php')
